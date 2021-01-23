@@ -1,0 +1,109 @@
+@keyframes panieboze {
+    0% {
+        left: 134%;
+        top: 70%;
+    }
+
+    10% {
+        left: 55%;
+        top: 50%;
+    }
+
+    20% {
+        left: -435%;
+        top: 410%;
+    }
+
+    30% {
+        left: 85%;
+        top: 100%;
+    }
+
+    40% {
+        left: -45%;
+        top: 30%;
+    }
+
+    50% {
+        left: -55%;
+        top: -30%;
+    }
+
+    60% {
+        left: 145%;
+        top: 10%
+    }
+
+    70% {
+        left: 155%;
+        top: -25%;
+    }
+
+    80% {
+        left: -45%;
+        top: 10%;
+    }
+
+    90% {
+        left: 105%;
+        top: 55%;
+    }
+
+    100% {
+        left: 115%;
+        top: -35%;
+    }
+}
+
+@keyframes textShake {
+    0% {
+        text-align: left;
+        color: red;
+    }
+
+    25% {
+        text-align: right;
+        color: blue;
+    }
+
+    50% {
+        text-align: left;
+        color: red;
+    }
+
+    75% {
+        text-align: right;
+        color: blue;
+    }
+
+    100% {
+        text-align: left;
+        color: red;
+    }
+}
+
+@keyframes imgRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}

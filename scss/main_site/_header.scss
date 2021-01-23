@@ -1,0 +1,175 @@
+/* Header styles */
+$headerHeight: 60px;
+$headerHeightTablet: 100px;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    background: lightgray;
+    // overflow: hidden;
+    z-index: 100;
+
+    @include for-tablet-landscape-up {
+        height: $headerHeightTablet;
+    }
+
+    .navigation {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 100px black;
+        position: relative;
+
+        @include for-tablet-landscape-up {
+            justify-content: space-between;
+        }
+
+        .navigation__button {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 26px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 2;
+
+            @include for-tablet-landscape-up {
+                display: none;
+            }
+
+            .fas {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+                transition: 0.4s;
+            }
+
+            .fas:nth-child(2) {
+                opacity: 0;
+            }
+        }
+
+        .navigation__button.active>.fas:nth-child(1) {
+            opacity: 0;
+        }
+
+        .navigation__button.active>.fas:nth-child(2) {
+            opacity: 1;
+        }
+
+        .navigation__button.active~.navigation__menu {
+            height: 250px;
+        }
+
+        .navigation__logo {
+            font-family: var(--logoFont);
+            cursor: pointer;
+            position: absolute;
+            font-size: 26px;
+            top: 10px;
+            left: 30px;
+            text-decoration: none;
+            color: black;
+
+            @include for-tablet-landscape-up {
+                font-size: 36px;
+                letter-spacing: 5px;
+                position: unset;
+            }
+        }
+
+        .navigation__menu {
+            transition: 0.4s;
+            display: flex;
+            list-style: none;
+            font-family: var(--primaryFont);
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 0;
+            align-items: center;
+            justify-content: flex-end;
+            background: gray;
+            width: 150px;
+            height: 0;
+            overflow: hidden;
+
+            @include for-tablet-portrait-up {
+                width: 200px;
+            }
+
+            @include for-tablet-landscape-up {
+                overflow: unset;
+                background: transparent;
+                position: unset;
+                flex-direction: row;
+            }
+
+
+            .menu__button {
+                display: block;
+                margin-top: 10px;
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                transition: 0.1s;
+                padding-bottom: 12px;
+                border-bottom: 0 solid black;
+
+                &:hover {
+                    border-bottom: 3px solid black;
+                }
+
+                @include for-tablet-portrait-up {
+                    font-size: 24px;
+                    margin-top: 0;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+}
+
+
+.menu__item:nth-child(1) .menu__button::before {
+    font-family: var(--awesomeFonts);
+    content: "\f2ed";
+    font-weight: 900;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.menu__item:nth-child(2) .menu__button::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f793";
+    font-weight: 900;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.menu__item:nth-child(3) .menu__button::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f1b8";
+    font-weight: 900;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.menu__item:nth-child(4) .menu__button::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f6d7";
+    font-weight: 900;
+    margin-right: 10px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}

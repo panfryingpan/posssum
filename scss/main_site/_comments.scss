@@ -1,0 +1,113 @@
+/* Comments styles */
+
+.comments {
+    background: silver;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.comments.smallContainer {
+    margin: 50px auto;
+}
+
+.comments__header {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 16px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+
+    &::after {
+        content: "\f086";
+        font-family: var(--awesomeFonts);
+        font-weight: 900;
+        margin-left: 20px;
+    }
+
+    &::before {
+        content: "\f086";
+        font-family: var(--awesomeFonts);
+        font-weight: 900;
+        margin-right: 20px;
+    }
+
+    @include for-tablet-portrait-up {
+        font-size: 30px;
+    }
+}
+
+
+.comments__wraper {
+    display: flex;
+    width: 90%;
+    margin: 50px auto;
+    justify-content: space-around;
+
+    @include for-desktop-up {
+        justify-content: center;
+    }
+}
+
+.comments__avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 4px solid black;
+
+    @include for-tablet-portrait-up {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.comments__description-middle {
+    width: 150px;
+    font-size: 16px;
+    @include commentLeft;
+
+    @include for-tablet-portrait-up {
+        width: 300px;
+        font-size: 30px;
+    }
+
+    @include for-desktop-up {
+        font-size: 40px;
+        width: 450px;
+    }
+}
+
+
+.comments__wraper:nth-child(3) .comments__avatar {
+    background: url("../images/possumavatar2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.comments__wraper:nth-child(2) .comments__avatar {
+    background: url("../images/possumavatar3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.comments__wraper:nth-child(4) .comments__avatar {
+    background: url("../images/possumavatar.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.comments__description {
+    font-size: 16px;
+    width: 150px;
+    @include commentRight;
+
+    @include for-tablet-portrait-up {
+        width: 300px;
+        font-size: 30px;
+    }
+
+    @include for-desktop-up {
+        font-size: 40px;
+        width: 450px;
+    }
+}
